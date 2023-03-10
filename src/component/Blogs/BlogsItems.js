@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import blog from '../../images/git.webp'
+import blogs from '../../images/git.webp'
 const BlogsItems = () => {
     return (
         <main class="post-container" id="lws-postContainer">
             <Link to={`blog/${1}`}>
                 <a href="post.html">
-                    <img src={blog} class="lws-card-image" alt="" />
+                    <img src={blogs} class="lws-card-image" alt="" />
                 </a>
                 <div class="p-4">
                     <div class="lws-card-header">
