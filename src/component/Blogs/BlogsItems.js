@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import blogs from '../../images/git.webp'
 const BlogsItems = ({ blog }) => {
-    const { title, description, createdAt, image, isSaved, likes, tags } = blog
+    const { title, description, createdAt, image, isSaved, likes, tags,id} = blog
     return (
             <div>
-                <Link to={`blog/${1}`} >
-                    <a href="post.html">
+                <Link to={`blog/${id}`} >
+                    <Link to={`blog/${id}`}>
                         <img src={image} className="lws-card-image" alt="" />
-                    </a>
+                    </Link>
                     <div className="p-4">
                         <div className="lws-card-header">
                             <p className="lws-publishedDate">{createdAt}</p>
