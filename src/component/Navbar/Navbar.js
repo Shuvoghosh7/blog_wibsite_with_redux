@@ -4,17 +4,17 @@ import logo from '../../images/LWSBlog.svg'
 import './Navbar.css'
 const Navbar = () => {
     return (
-        <nav class="py-4 border-b">
-            <div class="navbar-container">
-                <div class="logo">
+        <nav className="py-4 border-b">
+            <div className="navbar-container">
+                <div className="logo">
                     <Link to='/'>
                         <img src={logo} alt="search" />
                     </Link>
                 </div>
-               
-                <div class="auth-buttons">
-                    <button class="btn btn-primary">sign in</button>
-                    <button class="btn btn-outline">sign up</button>
+
+                <div className="auth-buttons">
+                    <button className="btn btn-primary">sign in</button>
+                    <button className="btn btn-outline">sign up</button>
                 </div>
             </div>
         </nav>

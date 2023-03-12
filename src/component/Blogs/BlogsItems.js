@@ -1,27 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import blogs from '../../images/git.webp'
-const BlogsItems = () => {
+const BlogsItems = ({ blog }) => {
+    const { title, description, createdAt, image, isSaved, likes, tags } = blog
     return (
-        <main class="post-container" id="lws-postContainer">
-            <Link to={`blog/${1}`}>
-                <a href="post.html">
-                    <img src={blogs} class="lws-card-image" alt="" />
-                </a>
-                <div class="p-4">
-                    <div class="lws-card-header">
-                        <p class="lws-publishedDate">2023-05-01</p>
-                        <p class="lws-likeCount"><i class="fa-regular fa-thumbs-up"></i>100</p>
-                    </div>
-                    <Link to={`blog/${1}`} class="lws-postTitle"> Top Github Alternatives </Link>
-                    <div class="lws-tags"><span>#python,</span> <span>#tech,</span> <span>#git</span></div>
+            <div>
+                <Link to={`blog/${1}`} >
+                    <a href="post.html">
+                        <img src={image} className="lws-card-image" alt="" />
+                    </a>
+                    <div className="p-4">
+                        <div className="lws-card-header">
+                            <p className="lws-publishedDate">{createdAt}</p>
+                            <p className="lws-likeCount"><i className="fa-regular fa-thumbs-up"></i>100</p>
+                        </div>
+                        <Link to={`blog/${1}`} className="lws-postTitle"> {title} </Link>
+                        <div className="lws-tags"><span>#python,</span> <span>#tech,</span> <span>#git</span></div>
 
-                    <div class="flex gap-2 mt-4">
-                        <span class="lws-badge"> Saved </span>
+                        <div className="flex gap-2 mt-4">
+                            <span className="lws-badge"> {isSaved} </span>
+                        </div>
                     </div>
-                </div>
-            </Link>
-        </main>
+                </Link>
+            </div>
     );
 };
 
