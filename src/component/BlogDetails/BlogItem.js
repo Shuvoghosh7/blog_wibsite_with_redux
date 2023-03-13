@@ -11,7 +11,8 @@ const BlogItem = ({blog}) => {
                     {title}
                 </h1>
                 <div className="tags" id="lws-singleTags">
-                    <span>#python,</span> <span>#tech,</span> <span>#git</span>
+                   {/*  <span>#python,</span> <span>#tech,</span> <span>#git</span> */}
+                   {tags}
                 </div>
                 <div className="btn-group">
 
@@ -21,7 +22,7 @@ const BlogItem = ({blog}) => {
                     {/*  <!-- handle save on button click -->
             <!-- use ".active" class and "Saved" text  if a post is saved, other wise "Save" --> */}
                     <button className="active save-btn" id="lws-singleSavedBtn">
-                        <i className="fa-regular fa-bookmark"></i> {isSaved}
+                        <i className="fa-regular fa-bookmark"></i> Saved
                     </button>
                 </div>
                 <div className="mt-6">

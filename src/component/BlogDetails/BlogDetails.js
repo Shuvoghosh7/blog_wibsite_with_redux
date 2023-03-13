@@ -1,12 +1,10 @@
 import React from 'react';
 import BlogItem from './BlogItem';
-import RetatedBlog from './RetatedBlog';
 import { useParams } from "react-router-dom";
-
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux";
 import { fetchBlog } from '../../features/blog/blogSlice';
-
+import RelatedBlogs from '../RelatedBlogs/RelatedBlogs';
 
 const BlogDetails = () => {
     const dispatch = useDispatch()
@@ -16,7 +14,7 @@ const BlogDetails = () => {
         dispatch(fetchBlog(blogId))
     }, [dispatch, blogId])
 
-    console.log(blog)
+    const { tags, id } = blog || {};
     let content = null;
     if (isLoading) content = <p>Loading....</p>
 
@@ -34,7 +32,7 @@ const BlogDetails = () => {
             <div>
                 {content}
             </div>
-            <RetatedBlog />
+            <RelatedBlogs currentVideoId={id} tags={tags}/>
         </section>
     );
 };

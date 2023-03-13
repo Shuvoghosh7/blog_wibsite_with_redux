@@ -5,8 +5,8 @@ const BlogsItems = ({ blog }) => {
     const { title, description, createdAt, image, isSaved, likes, tags,id} = blog
     return (
             <div>
-                <Link to={`blog/${id}`} >
-                    <Link to={`blog/${id}`}>
+                <Link to={`/blogs/${id}`} >
+                    <Link to={`/blogs/${id}`}>
                         <img src={image} className="lws-card-image" alt="" />
                     </Link>
                     <div className="p-4">
